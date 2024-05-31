@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=M+PLUS+Code+Latin:wght@100..700&display=swap');
+
+:root {
+    --brand1: #0c6;
+    --brand2: #0c65;
+    --bg1: #0b0b0b;
+    --bg2: #151515;
+    --color1: #f0f0f0;
+    --color2: #bbb;
+    --color3: #777;
+    --font1: "M PLUS Code Latin", monospace;
+    --font2: "IBM Plex Mono", monospace;
+    font-size: 14px;
+}
+
+* {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color2);
+    font-family: var(--font2);
+}
+
+body {
+    background-color: var(--bg1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color1);
+    font-family: var(--font1);
+}
+
+h1 { font-size: 3em; font-weight: 300; }
+h2 { font-size: 1.8em; font-weight: 700; }
+h3 { font-size: 1.6em; font-weight: 650; }
+h4 { font-size: 1.4em; font-weight: 600; }
+h5 { font-size: 1.2em; font-weight: 600; }
+
+.brand-btn {
+    background-color: var(--brand1);
+    color: var(--bg1);
+    font-weight: 500;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    &:hover {
+        background-color: #539565;
+        text-decoration: none;
+    }
+    &:active {
+        background-color: #447a52;
+    }
+}
+
+.secondary-btn {
+    background-color: #0000;
+    border: 1px solid var(--color1);
+    color: var(--color1);
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        opacity: .7;
+        text-decoration: none;
+    }
+}
+
+a { 
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline 
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+nav img {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+nav .menu {
+    user-select: none;
+}
+
+nav .menu a {
+    padding-left: .5em;
+    font-size: 1.2em;
+}
+
+footer {
+    margin: 2em;
+    padding: 2em 2em 1em 2em;
+    border-top: 1px solid var(--brand1);
+    border-left: 1px solid var(--brand1);
+    transition: 100ms;
+}
+
+footer .boxes-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em 5em;
+}
+
+footer .box {
+    flex: 1;
+    width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+}
+
+footer .box .title {
+    font-weight: 500;
+    margin-bottom: .2em;
+    font-size: 1.5em;
+    font-family: var(--font2);
+}
+
+footer .box a {
+    color: var(--brand1);
+    width: fit-content;
+}
+
+footer .bottom-menu {
+    margin-top: 2.2em;
+    display: flex;
+    gap: .5em 1.2em;
+    flex-wrap: wrap;
+}
+
+footer .bottom-menu p.copy {
+    color: var(--color3);
+    font-weight: 500;
+}
+
+footer .bottom-menu p.lang {
+    color: var(--color3);
+    user-select: none;
+    display: flex;
+    gap: .3em;
+}
+
+footer .bottom-menu p.lang a:hover {
+    color: var(--brand1);
+}
+
+footer .bottom-menu p.lang a.selected {
+    color: var(--color3);
+    &:hover {
+        text-decoration: none;
+        color: var(--color3);
+    }
+}
+
+.teleport-particles {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100svh;
+    top: 0;
+    left: 0;
+}
+
+.teleport-particles div {
+    position: fixed;
+    width: 100%;
+    display: none;
+    &[data-open] {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 12px;
+    }
+
+
+}
