@@ -1,0 +1,163 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
+
+:root {
+    --brand1: #00ca65;
+    --brand2: #4656e4;
+    --brand3: #e88134;
+
+    --bg1: #0e0e0e;
+    --bg2: #2d2d2d;
+
+    --h1-color: #f0f0f0;
+    --h2-color: #f0f0f0;
+    --p-color: #b7b7b7;
+
+    --font1: 'Montserrat', sans-serif;
+    --font2: 'Rubik', sans-serif;
+    --font3: 'Open Sans', sans-serif;
+
+    font-size: 14px;
+}
+
+* {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--p-color);
+    font-family: var(--font3);
+}
+
+html { scroll-behavior: smooth }
+body {
+    background-color: var(--bg1);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--h1-color);
+    font-family: var(--font1);
+    text-transform: capitalize;
+}
+
+h1 { font-size: 3em; font-weight: 800; }
+h2 { font-size: 1.8em; font-weight: 700; }
+h3 { font-size: 1.6em; font-weight: 650; }
+h4 { font-size: 1.4em; font-weight: 600; }
+h5 { font-size: 1.2em; font-weight: 600; }
+
+.brand-subheading {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+    font-family: var(--font2);
+    color: var(--h2-color);
+}
+
+.brand-btn1 {
+    background-color: var(--brand1);
+    outline: none;
+    padding: .5em 1.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4em;
+    font-family: var(--font2);
+    color: var(--bg1);
+    border-radius: 1000px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 50ms;
+    border: 0;
+}
+.brand-btn1:hover {
+    opacity: .8;
+}
+.brand-btn1:active {
+    opacity: .7;
+}
+
+.brand-btn2 {
+    background-color: #3748ddaa;
+    border: 1px solid #5667ff;
+    outline: none;
+    padding: .5em 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.4em;
+    font-family: var(--font2);
+    color: var(--h2-color);
+    border-radius: .5em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 50ms;
+}
+.brand-btn2:hover {
+    background-color: #3748dd90;
+}
+.brand-btn2:active {
+    background-color: #3748dd80;
+}
+
+.brand-text {
+    font-family: inherit;
+    color: var(--brand1);
+}
+.brand-box {
+    background-color: #2d2d2d70;
+    border: 1px solid #444;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1em 2em;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-size: 1.2em;
+    align-items: center;
+    position: relative;
+}
+nav .logo span {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--brand1);
+    font-family: var(--font1);
+}
+nav .logo div {
+    width: .3em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--brand3);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    translate: 45% -10%;
+    z-index: -1;
+}
+nav .menu {
+    margin-right: -.5em;
+    user-select: none;
+}
+nav .menu a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: var(--p-color);
+    font-size: 1em;
+    border-radius: .3em;
+    transition: 50ms;
+    text-transform: lowercase;
+}
+nav .menu a:hover {
+    opacity: .7;
+}
+
+@media(max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .brand-subheading {
+        font-size: 1.4em;
+    }
+}
